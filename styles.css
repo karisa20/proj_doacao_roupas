@@ -1,0 +1,232 @@
+/*css tudo página*/
+
+/* https://www.youtube.com/watch?v=OFip2LlKtGY - xampp */
+
+.botao_doacao{
+    background-color: #f44336; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+
+}
+
+h2 {
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 18px;
+
+}
+
+/*css reset: */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+/*css topo*/
+.topo{
+    background-color:  #f44336;
+    padding: 50px;
+    border: 3px solid #f44336;
+    border-radius: 10px;
+    overflow: hidden;
+    position: static;
+}
+.logo{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.menu{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    color: #f44336;
+    text-align: center;
+}
+
+.sacola-container {
+    display: flex;
+}
+
+.produtos {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.projeto {
+    flex: 1;
+    padding: 20px;
+    background-color: #e3f2fd;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Carrossel responsive*/
+section.carrosel{
+    margin: 0 auto; /*centralizar*/
+    width: 100%; /* para ocupar todo espaço da tela*/
+    height: auto;
+    padding: 0 !important; /*colocando importante para que ele não crie paddings adicionais*/
+    overflow: hidden;/*barra de rolagem fique escondida mesmo que o conteúdo vaze da tela*/
+}
+.carrosel-contente{
+    width: 400%; /*bem exagerado, para que caiba todas as imgens e ainda sobre*/
+    height: auto;
+    display: flex; /*para que as divs fiquem uma do lado da outra*/
+
+}
+.carrosel-contente input, .img-mobile{
+    display: none;/*para deixar os inputs escondidos*/
+    
+}
+
+.slide-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+.slide-box img{
+   width: 100%; 
+}
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 100%;
+    bottom: -400px;
+    display: flex;
+    justify-content: center;
+}
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid red;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child)/*pra não aplicar espaço na última bolinha e tirar aquela emboleira de pontos*/{
+    margin-right: 10px;
+}
+.nav-manual .manual-btn:hover{
+    background-color: red;
+}
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3{/*quando radio1 estiver marcado aconteça algo*/
+    background-color: red;
+}
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+@media screen and (max-width: 928px){
+    .img-desktop{
+        display: none; /*fazendo as imgs desktop sumirem*/
+    }
+    .img-mobile{
+        display: block;/* e aparecerem as imgs de mobile*/
+    }
+}
+
+/* botão nav*/
+.botoes{
+    border:   gold solid; /*merda do quadrado*/
+    position:fixed;
+    top: 0px;
+    width: 100%;
+    margin:0px;
+    padding: 0px;
+    opacity: 0;
+    text-align: right;
+}
+.btn-15 {
+    display: inline-block;  /* Faz o link se comportar como um botão */
+    padding: 10px 20px;    /* Ajusta o padding para uma aparência melhor */
+    background-color:   #f44336; /* Cor de fundo principal */
+    color: white;           /* Cor do texto */
+    text-decoration: none;   /* Remove o sublinhado */
+    border-radius: 5px;     /* Bordas arredondadas */
+    position: relative;      /* Necessário para o pseudo-elemento :after */
+    z-index: 1;
+    transition: color 0.3s ease; /* Adiciona uma transição suave ao passar o mouse */
+}
+
+.btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;               /* Mudei de right para left para garantir a animação */
+    background-color: rgb(242, 238, 125); /* Cor de fundo ao passar o mouse */
+    border-radius: 5px;
+    box-shadow: 
+        inset 2px 2px 2px 0px rgba(255,255,255,.5),
+        7px 7px 20px 0px rgba(0,0,0,.1),
+        4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: width 0.3s ease; /* Ajuste a transição para a largura */
+    z-index: -1; /* A camada de fundo deve ficar atrás */
+}
+
+.btn-15:hover {
+    color: #fff;  /* Muda a cor do texto ao passar o mouse */
+}
+
+.btn-15:hover:after {
+    width: 100%;  /* Expande o fundo ao passar o mouse */
+}
+
+.btn-15:active {
+    position: relative;
+    top: 2px;        /* Movimento para baixo ao clicar */
+    transition: none; /* Remove a transição ao clicar */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color:#f44336;
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    /* Modificações de CSS específicas para dispositivos móveis */
+}
+
+/* mapa*/
+#map {
+    height: 400px; /* Altura do mapa */
+    width: 100%; /* Largura do mapa */
+}

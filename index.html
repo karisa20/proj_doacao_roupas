@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe Agasalhos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="topo">
+        <nav class="menu">
+            <div class="container">
+                <div class="logo">
+                    <img src="imagens/icone-jeux-et-jeux-video-violet.png" alt="Logo" width="25%" height="25%">
+                </div>
+                <nav>
+                <div class="menu">
+                    <a href="#home" class="btn-15">Início</a>
+                    <a href="#Produtos" class="btn-15">Produtos</a>
+                    <a href="#doacao" class="btn-15">Doação</a>
+                    <a href="#contato" class="btn-15">Contato</a>
+                </div>
+        </nav>
+    </header>
+    <section>
+        <br><br><br>
+
+    <h1>PROJETO DOAÇÃO DE ALIMENTOS</h1>
+    <div><br><br>
+        <p>Doe Agasalhos é um projeto que visa ajudar pessoas em situação de vulnerabilidade social.</p>
+        <p>Com a sua ajuda, podemos fazer a diferença na vida de muitas pessoas.</p>
+        <p>Junte-se a nós nessa causa!</p>
+        <p>Doe agasalhos e faça a diferença!</p>
+        <p>Você pode ajudar de várias formas, seja doando agasalhos, roupas, cobertores, com dinheiro ou seu tempo.</p>
+        <p>Entre em contato conosco e saiba como você pode ajudar.</p>
+
+        <br><br>
+        
+        <h1>DOE AGASALHOS</h1>
+        <br><br><br>
+</section>
+    <section class="carrosel">
+
+        <div class="carrosel-contente"> <!--Botões inputs-->
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+
+            <div class="slide-box primeiro"><!--classe a mais (primeiro/segundo/etc). Para distinguir as classes tem que ter espaço entre elas-->
+                <img class="img-desktop" src="./img/capa-materia.jpg" alt="Doação" width="1600" height="600">
+               <!-- <a href="#"><img src="imgs/a730340106.webp" alt="Orquídea"></a> se eu quisesse colocar um link dentro da img-->
+               <img class="img-mobile" src="./img/capa-materia.jpg" alt="Doação" width="1040" height="600">
+            </div> 
+
+            <div class="slide-box segundo"> <!--contém imagens tipo desktop e mobile-->
+                <img class="img-desktop" src="./img/dan-gold-ajn-jjflycu-unsplash.avif" alt="Doação Roupas" width="1800" height="600">
+                <img class="img-mobile" src="./img/dan-gold-ajn-jjflycu-unsplash.avif" alt="Doação Roupas" width="1040" height="600">
+            </div>
+
+            <div class="slide-box terceiro">
+                <img class="img-desktop" src="./img/900fefd2-campanha-agasalho-1024x614-1.jpg" alt="Doação Agasalhos" width="1800" height="600">
+                <img class="img-mobile" src="./img/900fefd2-campanha-agasalho-1024x614-1.jpg" alt="Doação Alimentos" width="1040" height="600">
+            </div>
+            
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>           
+                <label for="radio2" class="manual-btn"></label>           
+                <label for="radio3" class="manual-btn"></label>           
+            </div>
+
+        </div>
+        <!-- slide carrosel https://www.youtube.com/watch?v=sk7mgXO-FeQ -->
+    </section>
+    <br><br><br><br>
+    <div class="sacola-container">
+        <section class="produtos">
+
+            <br><br>
+            <h1>FORMAS DE DOAR</h1>
+            <p>Doando por transferência bancária, pix, levando até o responsável.</p>
+
+            <br><br>
+
+            <h1>PRODUTOS</h1> <br><br>
+            <h1>Valores sugeridos de doação:</h1> <br>
+            <p>Meias - R$ 15</p>
+            <p>Luvas - R$ 20</p>
+            <p>Gorro - R$ 30</p>
+            <p>Calça moletom - R$ 50</p>
+            <p>Casaco - R$ 100</p>
+            <p>Blusa de frio - R$ 150</p>
+            
+            <br><br>
+
+        </section>
+
+    </div>
+
+    <br>
+    <section id="doacao"><br>
+        <h1>Como Funciona</h1><br>
+        <p>Você escolhe os produtos que deseja doar e nós cuidamos do resto!</p>
+        <p>Após a confirmação da doação, entraremos em contato para agendar a retirada.</p>
+        <br>
+        <br>
+         
+        <h1>OUTRAS FORMAS</h1>
+        <br>
+
+        <p>Você também pode doar via transferência bancária.</p>
+        <br>
+        <p>Banco do Brasil | Agência:  | Conta Corrente: </p>
+        <p>Banco Itaú | Agência:  | Conta Corrente: </p>
+        <p>Banco Santander | Agência: | Conta Corrente: </p>
+        <p>Pix | Chave CNPJ: </p>
+    
+        <br><br>
+        <h1>CONTATOS E LOCALIZAÇÃO</h1>
+        <p>Telefone: (11) 99999-9999</p>
+        <p>Endereço: Rua Antônio Registro, nº </p>
+
+        <!-- mapa --><br><br>
+        <h1>Localização</h1>
+        <br><br>
+        <div id="map"></div>
+
+        <br><br><br><br>
+
+    <footer>
+        <p>&copy; 2025 DOE AGASALHOS</p>
+    </footer>
+
+    <script src="script.js"></script>
+<!-- Adicione a API do Google Maps com sua chave -->
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtANXhtT6Gi8_Q3o9m0Sf20VbpVsW9jRo&callback=initMap">
+</script>
+
+
+    
+</body>
+</html>
+
