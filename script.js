@@ -21,7 +21,7 @@ function proximaImagem() { //verificador
 //mapa
 function initMap() {
     // Localização (exemplo: São Paulo)
-    const localizacao = { lat: -23.190982770535946, lng: -50.65265782299398 };
+    const localizacao = { lat: -23.180152697331142, lng: -50.66436608735291};
     // Criar o mapa
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 10,
